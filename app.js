@@ -55,3 +55,14 @@ function whenDrawing(e) { //whenDrawing function
 
     ctx.stroke();
 }
+
+//Task 4: Add Color Selection and Canvas Clearing
+const colorPicker = document.getElementById('colorPicker'); //reference html colorPicker
+colorPicker.addEventListener('input', (e) => {
+    selectedColor = e.target.value; //retrieves selected color from colorPicker and updates new color
+});
+
+const clearButton = document.getElementById('clearCanvas'); //reference html clearCanvas
+clearButton.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //clears entire canvas
+});
